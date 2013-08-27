@@ -1,10 +1,14 @@
-<div class="hero-unit">
-	<h1>Welcome to my first App on RoR!</h1>
-	<p>
-		Edit, you'll be very happy to see what I've done in this 
-		<%= link_to "One Month Rails", "http://onemonthrails.com" %> course.
-	</p>
-	<p>
-		<%= link_to "Sign Up Now!", "#" %>
-	</p>
-</div>
+<% if user_signed_in? %>
+	<h1>You're logged in</h1>
+<% else %>
+	<div class="hero-unit">
+		<h1>Welcome to my first App on RoR!</h1>
+		<p>
+			Edit, you'll be very happy to see what I've done in this 
+			<%= link_to "One Month Rails", "http://onemonthrails.com" %> course.
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+		</p>
+	</div>
+<% end %>
