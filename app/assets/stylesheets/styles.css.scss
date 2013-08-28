@@ -1,5 +1,10 @@
-$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);
+/* you could change the font
+/* $baseFontFamily: Oxygen;
+# @import url(http://fonts.googleapis.com/css?family=Oxygen); */
+
+$btnPrimaryBackground: green;
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
 
 @import 'bootstrap';
 
@@ -9,8 +14,13 @@ body {
 
 @import 'bootstrap-responsive';
 
-.footer {
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;	
+}
 
+
+.footer {
 	margin-top: 60px;
 	color: $grayLight;
 	a {
